@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@300;600&display=swap');
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background: #222;
+    background-image: url('https://images.unsplash.com/photo-1524476020173-fe0a405e8b80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');    
+    
+}
+
+
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 1em;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    margin: 0.5em;
+    border: none; 
+    display: flex;
+    outline: none;
+}
+
+button {
+ outline: none;    
+ border-radius: 10px;
+ background:#7c7c7c2a;
+ color: white;
+ 
+}
+
+.temp {
+    font-size: 3.5em;
+    margin: 0;
+    margin-bottom: 0.3em;
+}
+
+.description {
+    text-transform: capitalize;
+    margin: 8px;
+}
+
+input.searchbar {
+    border:none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 20px;
+    background: #7c7c7c2a;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    width: calc(100% - 100px);
+}
+
+button:hover {
+    background:#7c7c7c6a;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.humidity {
+    padding-bottom: 5px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position:relative;
+
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
