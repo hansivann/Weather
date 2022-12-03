@@ -1,6 +1,8 @@
 console.log('hello there');
 
 // get api key from weatherapi.com
+// take away brackets outside of API KEY
+//weather variable and function to call on api; used fetch
 let weather = {
     "apiKey": "1234567890",
     fetchWeather: function (city) {
@@ -9,7 +11,8 @@ let weather = {
         .then((data) => this.displayWeather(data));
     },
 
-
+//displayWeather used to show what has been retrieved from weatherapi.com and display it on the page
+    
     displayWeather: function(data) {
         const { name, region, localtime } = data.location;
         const { temp_f, condition, icon} = data.current;
@@ -29,16 +32,21 @@ let weather = {
     }
 };
 
+//click the search button to perform search
+
 document
 .querySelector(".search button")
 .addEventListener("click", function () {
 weather.search();
 })
  
+//press enter key instead of clicking the search button
+
 document.querySelector(".searchbar").addEventListener("keyup", function (event) {
     if (event.key == "Enter") {
         weather.search(); 
     }
 })
 
+//once page is open, it will display Los Angeles weather. If so, means it works
 weather.fetchWeather("Los Angeles");
