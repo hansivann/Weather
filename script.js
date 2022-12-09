@@ -50,3 +50,7 @@ document.querySelector(".searchbar").addEventListener("keyup", function (event) 
 
 //once page is open, it will display Los Angeles weather. If so, means it works
 weather.fetchWeather("Los Angeles");
+
+// added a loading text when page is loading
+// loading text disappears once page is loaded
+// see css style loading
